@@ -1,0 +1,108 @@
+/* Chat.css */
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+  margin-top: 11px;
+  margin-bottom: 23px;
+
+}
+
+.Total-pro,
+.closed,
+.running,
+.closure,
+.cancelled {
+  text-align: start;
+  flex-basis: 20%;
+  padding-left: 12px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border-left: 11px solid rgba(120, 196, 255, 0.85);
+  border-radius: 9px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(13, 69, 255, 0.35) 0px 5px 15px;
+  /* margin-right: 10px; */
+}
+
+.Total-pro h4,
+.closed h4,
+.running h4,
+.closure h4,
+.cancelled h4 {
+  font-size: 16px;
+  color: gray;
+  margin-top: 9px;
+  margin-bottom: 13px;
+}
+
+.Total-pro h1,
+.closed h1,
+.running h1,
+.closure h1,
+.cancelled h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-top: -5px;
+  margin-bottom: 11px;
+}
+
+.Project_parent p {
+  font-size: 21px;
+  color: black;
+  padding-top: 13px;
+}
+
+.Project_parent {
+  margin-top: -20%;
+
+}
+
+.mobile .Project_parent {
+  margin-top: -5%;
+}
+
+.apexcharts-canvas {
+  max-width: 100%;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(13, 69, 255, 0.35) 0px 5px 15px;
+}
+
+.chart-card {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .Total-pro,
+  .closed,
+  .running,
+  .closure,
+  .cancelled {
+    flex-basis: 100%;
+    padding: 5px;
+  }
+
+  .chart-card {
+    width: 100%;
+  }
+
+  .Project_parent p {
+    font-size: 22px;
+    color: black;
+    margin-top: -10px;
+
+  }
+
+  .Total-pro,
+  .closed,
+  .running,
+  .closure,
+  .cancelled {
+    margin-right: 10px;
+  }
+}

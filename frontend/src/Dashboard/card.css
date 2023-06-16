@@ -1,0 +1,110 @@
+.dashboard-cardmob {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: auto;
+    width: 99%;
+    box-sizing: border-box;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 8px;
+
+
+}
+
+/* .h3 {
+    margin: 0;
+    font-size: 19px;
+} */
+
+.p {
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+
+.button-container button {
+    padding: 9px 15px;
+    font-size: 21px;
+    border-radius: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 98%;
+
+    margin: auto;
+}
+
+.Head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectTheme>h3 {
+    margin-bottom: -7px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.projectTheme p {
+    color: gray;
+    margin-top: 7px;
+    font-size: 17px;
+}
+
+.projectStatus>h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(4, 78, 146);
+}
+
+.Head p {
+    text-align: left;
+}
+
+.projectReason {
+
+    margin-top: 6px;
+}
+
+.projectReason p {
+    font-size: 18px;
+    margin-top: -5px;
+    font-weight: 600;
+    color: gray;
+}
+
+.projectReason span {
+    color: black;
+    font-size: 19px;
+}
+
+.Inline {
+    color: red;
+}
+
+.action-button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button.start {
+    background-color: rgb(4, 78, 146);
+    color: #fff;
+    border-radius: 20px;
+}
+
+.action-button.close,
+.action-button.cancel {
+    background-color: white;
+    color: rgb(4, 78, 146);
+    border: solid 1px rgb(4, 78, 146);
+    border-radius: 20px;
+}

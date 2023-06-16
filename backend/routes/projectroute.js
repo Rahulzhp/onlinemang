@@ -150,7 +150,9 @@ projectRoute.get("/sort/low", async (req, res) => {
         res.status(500).send("An error occurred");
     }
 });
-projectRoute.get("/sort/medium", async (req, res) => {
+
+
+projectRoute.get("/sort/project", async (req, res) => {
     const { page = 1, search } = req.query;
     const skip = (page - 1) * PAGE_SIZE;
     try {
@@ -159,16 +161,7 @@ projectRoute.get("/sort/medium", async (req, res) => {
             filter = {
                 $or: [
                     { project_theme: { $regex: search, $options: "i" } },
-                    { reason: { $regex: search, $options: "i" } },
-                    { type: { $regex: search, $options: "i" } },
-                    { division: { $regex: search, $options: "i" } },
-                    { category: { $regex: search, $options: "i" } },
-                    { priority: { $regex: search, $options: "i" } },
-                    { department: { $regex: search, $options: "i" } },
-                    { start_date: { $regex: search, $options: "i" } },
-                    { end_date: { $regex: search, $options: "i" } },
-                    { location: { $regex: search, $options: "i" } },
-                    { status: { $regex: search, $options: "i" } },
+
                 ],
             };
         }
@@ -180,20 +173,10 @@ projectRoute.get("/sort/medium", async (req, res) => {
                 $match: filter,
             },
             {
-                $addFields: {
-                    priorityOrder: {
-                        $switch: {
-                            branches: [
-                                { case: { $eq: ['$priority', 'Medium'] }, then: 0 },
-                                { case: { $eq: ['$priority', 'High'] }, then: 1 },
-                                { case: { $eq: ['$priority', 'Low'] }, then: 2 }
-                            ],
-                            default: 3
-                        }
-                    }
-                }
-            },
-            { $sort: { priorityOrder: 1 } }
+                $sort: { project_theme: 1 } // Sort project_theme in ascending alphabetical order
+            }
+
+
         ]).skip(skip)
             .limit(PAGE_SIZE);
         res.send({ data, totalPages });
@@ -202,6 +185,7 @@ projectRoute.get("/sort/medium", async (req, res) => {
         res.status(500).send("An error occurred");
     }
 });
+
 
 
 projectRoute.get("/status/running", async (req, res) => {

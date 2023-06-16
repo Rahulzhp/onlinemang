@@ -1,0 +1,171 @@
+.dashboard-card {
+  padding: 20px;
+  margin: auto;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-top: -18%;
+  width: 95%;
+
+}
+
+.mobile .dashboard-card {
+  margin-top: -6%;
+  width: 90%;
+}
+
+.mob_card {
+
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+}
+
+.mob_card>div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+}
+
+
+
+thead {
+
+  background-color: rgb(161, 206, 233);
+}
+
+
+td {
+  padding: 11px;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid rgb(9, 27, 27);
+}
+
+th {
+  /* background-color: #f9f9f9; */
+  font-weight: 400;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.input-sort {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.input-sort>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-sort>div>select {
+  border: 0px;
+  background-color: #F5F5F5;
+  margin-top: auto;
+}
+
+.action-button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.action-button.start {
+  background-color: rgb(4, 78, 146);
+  color: #fff;
+  border-radius: 13px;
+}
+
+.action-button.close,
+.action-button.cancel {
+  background-color: white;
+  color: rgb(4, 78, 146);
+  border: solid 1px rgb(4, 78, 146);
+  border-radius: 13px;
+}
+
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.pagination button.active {
+  background-color: rgb(72, 212, 247);
+  color: #fff;
+  border-radius: 50%;
+}
+
+@media (max-width:1100px) {
+
+  table {
+    display: none;
+  }
+
+  .input-sort h3 {
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+
+@media(min-width:1101px) {
+  .mob_card {
+    display: none;
+  }
+}

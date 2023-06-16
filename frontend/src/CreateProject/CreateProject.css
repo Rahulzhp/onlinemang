@@ -1,0 +1,195 @@
+.Form_parent form {
+  margin: auto;
+  padding: 20px;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(13, 69, 255, 0.35) 0px 5px 15px;
+  background-color: white;
+  margin-top: -20%;
+  padding-bottom: 10%;
+}
+
+.project_added {
+
+  display: flex;
+  margin: auto;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+
+
+}
+
+.innerprojadd {
+  width: 20%;
+  height: 51px;
+  margin: auto;
+  background-color: green;
+  border-radius: 21px 3px;
+
+}
+
+.innerprojadd>p {
+  margin: auto;
+  padding: 13px;
+  font-size: 17px;
+  font-family: system-ui;
+  font-weight: 500;
+  margin-left: 9px;
+  letter-spacing: 0.5px;
+
+
+}
+
+.mobile .Form_parent form {
+  margin-top: -7%;
+  padding-bottom: 5%;
+}
+
+
+.Form_parent form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+
+.Form_parent form label select,
+.Form_parent form input[type="date"] {
+  margin-top: 5px;
+}
+
+.Form_parent {
+  padding: 20px;
+}
+
+.Form_parent form input,
+.Form_parent form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.Form_parent form input[type="date"] {
+  width: 92%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.mobile .Form_parent form input[type="date"] {
+  width: 95%;
+}
+
+.input_parent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.project-theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-theme>div:first-child {
+  width: 70%;
+}
+
+.save-button>button {
+  padding: 15px 40px;
+  background-color: rgb(4, 78, 146);
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.Form_parent .ProjectTheme {
+  padding-bottom: 30px;
+}
+
+.input_parent>div {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.input_parent>div>div {
+  width: 30%;
+  margin-top: 30px;
+}
+
+.mobile .input_parent>div>div {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.mobile .input_parent>div {
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+}
+
+.mobile .input_parent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile .Form_parent form {
+  position: relative;
+  /* z-index: -99; */
+}
+
+.mobile .project-theme>div:first-child {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.mobile .project-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile .Form_parent .ProjectTheme {
+  padding: 10px;
+  padding-bottom: 1.5625rem;
+}
+
+.mobile .save-button.mobile>button {
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.mobile .save-button {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin-left: -198px;
+}
+
+.mobile .status {
+  margin-left: 1px;
+}
+
+.status span {
+  font-weight: 500;
+  color: black;
+}
