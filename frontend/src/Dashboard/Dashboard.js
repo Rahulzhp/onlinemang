@@ -90,8 +90,8 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/${sort}?search=${search}&page=${currentPage}`)
+    else if (sort == "project") {
+      axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/project?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -129,18 +129,7 @@ export default function DashboardCard() {
         })
         .catch((err) => console.log(err));
     }
-    else {
-      console.log(sort)
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/${sort}?search=${search}&page=${currentPage}`)
-        .then((res) => {
-          console.log(res)
-          setData(res.data.data);
-          setTotalPages(res.data.totalPages);
-        })
-        .catch((er) => {
-          console.log(er)
-        })
-    }
+
 
   }
   return (
