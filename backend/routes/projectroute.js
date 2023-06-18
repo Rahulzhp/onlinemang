@@ -161,6 +161,16 @@ projectRoute.get("/sort/project", async (req, res) => {
             filter = {
                 $or: [
                     { project_theme: { $regex: search, $options: "i" } },
+                    { reason: { $regex: search, $options: "i" } },
+                    { type: { $regex: search, $options: "i" } },
+                    { division: { $regex: search, $options: "i" } },
+                    { category: { $regex: search, $options: "i" } },
+                    { priority: { $regex: search, $options: "i" } },
+                    { department: { $regex: search, $options: "i" } },
+                    { start_date: { $regex: search, $options: "i" } },
+                    { end_date: { $regex: search, $options: "i" } },
+                    { location: { $regex: search, $options: "i" } },
+                    { status: { $regex: search, $options: "i" } },
 
                 ],
             };
