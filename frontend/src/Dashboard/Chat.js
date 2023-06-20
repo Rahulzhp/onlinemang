@@ -16,7 +16,10 @@ const BarChart = () => {
   useEffect(() => {
     axios
       .get("https://gold-dull-caiman.cyclic.app/project/dashboard")
-      .then((res) => setProjectData(res.data))
+      .then((res) => {
+        setProjectData(res.data)
+        console.log(res.data)
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -129,7 +132,7 @@ const BarChart = () => {
           <div className="project">
             <div className="closure">
               <h4>Closure Delay</h4>
-              <h1>1</h1>
+              <h1>{projectData && projectData.closureDelay}</h1>
             </div>
           </div>
           <div className="project">
@@ -155,7 +158,7 @@ const BarChart = () => {
           </div>
           <div className="closure">
             <h4>Closure Delay</h4>
-            <h1>1</h1>
+            <h1>{projectData && projectData.closureDelay}</h1>
           </div>
           <div className="cancelled">
             <h4>Cancelled</h4>
