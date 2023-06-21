@@ -1,20 +1,15 @@
-### USER CREDENTIAL ####
-
-# Email: yash@.com
-# Password: yash
-
-
+### Online Project management ####
 
 
 ![Tech Prime Lab Project](https://github.com/Rahulzhp/photos/assets/107567053/8cc6f1a6-c6bd-49f5-9fcf-bac4a1909309)
 
 # Clone of Online Project management
 
-Deployed Link - https://64832602f7acd60855e05b02--rococo-cascaron-bcbf5b.netlify.app/
+Deployed Link - https://64925bb990148b00c9d4d9e6--heroic-vacherin-42ee66.netlify.app/
 
 ## What is Online Project management?
 
-Where User's can manage their project acording to their requirements.
+Where User's can manage their project acording to their requirements. In dashboard their is Chart where user's can analyze their project.
 
 # Technology Stack Used
 
