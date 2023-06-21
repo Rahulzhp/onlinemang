@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.css'; // import CSS file for styling
 import logo from '../Icons/Logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash, faL } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 const Login = () => {
@@ -33,7 +33,7 @@ const Login = () => {
             setdisable(true)
             axios.post("https://gold-dull-caiman.cyclic.app/users/login", payload)
                 .then((res) => {
-                    if (res.data == "sucess") {
+                    if (res.data === "sucess") {
                         setInvalid(false)
                         navigate("/dashboard")
                         setdisable(false)
@@ -102,7 +102,7 @@ const Login = () => {
                         </div>
                         {passwordError && <span className="error-text">Password is required</span>}
                         <div className="forgot-password">
-                            <a href="#" className="red-link">
+                            <a href="gmail.com" className="red-link">
                                 Forgot Password?
                             </a>
                         </div>

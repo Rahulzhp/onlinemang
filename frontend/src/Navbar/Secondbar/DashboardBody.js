@@ -16,7 +16,7 @@ import DashboardCard from "../../Dashboard/Dashboard"
 
 
 
-import { Routes, Route, useNavigate, Navigate, Link } from "react-router-dom"
+import { Routes, Route, useNavigate } from "react-router-dom"
 const DashboardBody = () => {
     const navigate = useNavigate()
     const [isMobile, setIsMobile] = useState(false);
@@ -32,6 +32,8 @@ const DashboardBody = () => {
                 break;
             case ("create_project"): SetDashboardtitle("Create Project")
                 break;
+            default:
+                SetDashboardtitle("Dashboard")
         }
     }
 

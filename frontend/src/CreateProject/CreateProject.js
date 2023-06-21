@@ -52,7 +52,7 @@ function CreateProject() {
         e.preventDefault();
 
 
-        if (project.project_theme == "") {
+        if (project.project_theme === "") {
             setthemeError(true)
             setTimeout(() => {
                 setthemeError(false)

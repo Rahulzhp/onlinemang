@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Signup.css'; // import CSS file for styling
 import logo from '../Icons/Logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash, faL } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 const Signup = () => {
@@ -41,7 +41,7 @@ const Signup = () => {
             setdisable(true)
             axios.post("https://gold-dull-caiman.cyclic.app/users/register", payload)
                 .then((res) => {
-                    if (res.data == "success") {
+                    if (res.data === "success") {
                         setsignsucess(true)
                         setTimeout(() => {
                             navigate("/login")

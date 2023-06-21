@@ -81,8 +81,8 @@ form>span {
 .Username-input-container {
   width: 100%;
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   opacity: 0.5;
 }
 
@@ -101,7 +101,7 @@ form>span {
 .forgot-password {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   margin-top: -15px;
 }

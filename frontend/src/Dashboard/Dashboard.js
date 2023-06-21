@@ -13,7 +13,7 @@ export default function DashboardCard() {
   const [updateData, setUpdateData] = useState(false);
   const [sort, setSort] = useState("")
   useEffect(() => {
-    if (sort != "") {
+    if (sort !== "") {
       return sortData()
     }
     fetchData()
@@ -40,7 +40,7 @@ export default function DashboardCard() {
     setCurrentPage(page);
   };
   const sortData = () => {
-    if (sort == "High") {
+    if (sort === "High") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/high?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -50,7 +50,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "Running") {
+    else if (sort === "Running") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/status/running?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -60,7 +60,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "Closed") {
+    else if (sort === "Closed") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/status/close?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -70,7 +70,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "Cancelled") {
+    else if (sort === "Cancelled") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/status/cancel?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -80,7 +80,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "Low") {
+    else if (sort === "Low") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/low?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -90,7 +90,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "project") {
+    else if (sort === "project") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/project?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -100,7 +100,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "start-date") {
+    else if (sort === "start-date") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/start/date?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -110,7 +110,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "end-date") {
+    else if (sort === "end-date") {
       axios.get(`https://gold-dull-caiman.cyclic.app/project/end/date?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
@@ -120,7 +120,7 @@ export default function DashboardCard() {
           console.log(er)
         })
     }
-    else if (sort == "All") {
+    else if (sort === "All") {
       axios
         .get(`https://gold-dull-caiman.cyclic.app/project?search=${search}&page=${currentPage}`)
         .then((res) => {
