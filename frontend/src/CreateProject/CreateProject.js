@@ -61,7 +61,7 @@ function CreateProject() {
         } else {
             setaddproject(true)
             setdisable(true)
-            axios.post("https://gold-dull-caiman.cyclic.app/project/", project)
+            axios.post("https://light-bat-gown.cyclic.app/project/", project)
                 .then((res) => {
                     setdisable(false)
                     setProject(Empty)

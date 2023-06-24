@@ -39,7 +39,7 @@ const Signup = () => {
         } else {
             setPasswordError(false);
             setdisable(true)
-            axios.post("https://gold-dull-caiman.cyclic.app/users/register", payload)
+            axios.post("https://light-bat-gown.cyclic.app/users/register", payload)
                 .then((res) => {
                     if (res.data === "success") {
                         setsignsucess(true)

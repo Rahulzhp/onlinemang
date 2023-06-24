@@ -22,7 +22,7 @@ export default function DashboardCard() {
 
   const fetchData = debounce(() => {
     axios
-      .get(`https://gold-dull-caiman.cyclic.app/project?search=${search}&page=${currentPage}`)
+      .get(`https://light-bat-gown.cyclic.app/project?search=${search}&page=${currentPage}`)
       .then((res) => {
         setData(res.data.data);
         setTotalPages(res.data.totalPages);
@@ -32,7 +32,7 @@ export default function DashboardCard() {
   const update = (id, payload) => {
     console.log(id, payload)
     axios
-      .patch(`https://gold-dull-caiman.cyclic.app/project/${id}`, { status: payload })
+      .patch(`https://light-bat-gown.cyclic.app/project/${id}`, { status: payload })
       .then((res) => setUpdateData(!updateData))
       .catch(err => console.log(err))
   }
@@ -41,7 +41,7 @@ export default function DashboardCard() {
   };
   const sortData = () => {
     if (sort === "High") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/high?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/sort/high?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -51,7 +51,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Running") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/status/running?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/status/running?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -61,7 +61,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Closed") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/status/close?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/status/close?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -71,7 +71,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Cancelled") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/status/cancel?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/status/cancel?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -81,7 +81,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Low") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/low?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/sort/low?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -91,7 +91,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "project") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/sort/project?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/sort/project?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -101,7 +101,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "start-date") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/start/date?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/start/date?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -111,7 +111,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "end-date") {
-      axios.get(`https://gold-dull-caiman.cyclic.app/project/end/date?search=${search}&page=${currentPage}`)
+      axios.get(`https://light-bat-gown.cyclic.app/project/end/date?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);
@@ -122,7 +122,7 @@ export default function DashboardCard() {
     }
     else if (sort === "All") {
       axios
-        .get(`https://gold-dull-caiman.cyclic.app/project?search=${search}&page=${currentPage}`)
+        .get(`https://light-bat-gown.cyclic.app/project?search=${search}&page=${currentPage}`)
         .then((res) => {
           setData(res.data.data);
           setTotalPages(res.data.totalPages);

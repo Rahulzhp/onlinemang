@@ -15,7 +15,7 @@ const BarChart = () => {
   // Fetch data from the backend
   useEffect(() => {
     axios
-      .get("https://gold-dull-caiman.cyclic.app/project/dashboard")
+      .get("https://light-bat-gown.cyclic.app/project/dashboard")
       .then((res) => {
         setProjectData(res.data)
         console.log(res.data)
