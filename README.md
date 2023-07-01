@@ -5,7 +5,7 @@
 
 # Clone of Online Project management
 
-Deployed Link - https://649673e993a1cb2282b147f9--dreamy-cajeta-d38ca4.netlify.app/
+Deployed Link - https://649fb0e79bc5c773de24baa4--radiant-puppy-bdbf35.netlify.app/
 
 ## What is Online Project management?
 
@@ -33,19 +33,14 @@ To make this clone we have used HTMl, CSS and JavaScript, ReactJS for front-end 
 
 ## Project Listing Page
 -Desktop View
-<img width="710" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/3e258d53-11af-4046-93c8-f06b3656abe9" />
+<img width="710" alt="image" src="" />
 
 
--Mobile View
-<img width="225" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/26786c76-c37c-4ddf-8d0a-338cab1d4ba0" />
 
 ## Create Project page
 
 -Desktop View
-<img width="710" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/a09ae2ff-deb6-49ac-b67a-32e77628f736" />
-
--Mobile View
-<img width="225" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/c26c3122-a721-4012-bab2-3b59134c78a0" />
+<img width="710" alt="image" src="" />
 
 
 
@@ -56,7 +51,6 @@ To make this clone we have used HTMl, CSS and JavaScript, ReactJS for front-end 
 ## Login page
 
 -Desktop View
-<img width="710" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/0bff4904-91aa-48bd-ab1e-5813a309fdce" />
+<img width="710" alt="image" src="" />
 
--Mobile View
-<img width="225" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/0f176433-05e6-409e-922e-e129f460aec0" />
+
