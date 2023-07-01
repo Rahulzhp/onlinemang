@@ -9,7 +9,7 @@ Deployed Link - https://649fb0e79bc5c773de24baa4--radiant-puppy-bdbf35.netlify.a
 
 ## What is Online Project management?
 
-Where User's can manage their project acording to their requirements. In dashboard their is Chart where user's can analyze their project.
+Where User's can manage their project acording to their requirements. In dashboard their is Chart where user's can analyze their project. 
 
 # Technology Stack Used
 
