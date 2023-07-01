@@ -1,7 +1,7 @@
 ### Online Project management ####
 
 
-![Tech Prime Lab Project](https://github.com/Rahulzhp/photos/assets/107567053/8cc6f1a6-c6bd-49f5-9fcf-bac4a1909309)
+![Tech Prime Lab Project](https://github.com/Rahulzhp/onlinemang/assets/107567053/c8f02a99-8449-4b12-b2f4-d790016826fd)
 
 # Clone of Online Project management
 
@@ -33,24 +33,21 @@ To make this clone we have used HTMl, CSS and JavaScript, ReactJS for front-end 
 
 ## Project Listing Page
 -Desktop View
-<img width="710" alt="image" src="" />
-
-
+<img width="710" alt="image" src="https://github.com/Rahulzhp/onlinemang/assets/107567053/3caf446a-5de4-4d19-8152-837793a72984" />
 
 ## Create Project page
 
 -Desktop View
-<img width="710" alt="image" src="" />
-
+<img width="710" alt="image" src="https://github.com/Rahulzhp/onlinemang/assets/107567053/eb7bff1d-fef8-4e20-aade-b716f310c938" />
 
 
 ## Sorting & Filtering
-<img width="710" alt="image" src="https://github.com/Rahulzhp/photos/assets/107567053/eb4eff7f-ef0a-4146-bd9a-28dcde647074" />
+<img width="710" alt="image" src="https://github.com/Rahulzhp/onlinemang/assets/107567053/b961d70d-0216-49db-a9d6-3f8529c64e3e" />
 
 
 ## Login page
 
 -Desktop View
-<img width="710" alt="image" src="" />
+<img width="710" alt="image" src="https://github.com/Rahulzhp/onlinemang/assets/107567053/2f916096-a07e-4676-b0ba-498d24b82bcb" />
 
 
