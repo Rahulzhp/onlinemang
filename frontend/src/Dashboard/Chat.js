@@ -5,17 +5,25 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 const BarChart = () => {
   // State variables
   const [projectData, setProjectData] = useState(null);
+  const navigate = useNavigate()
   // Custom media query for mobile devices
   const [isMobile, setIsMobile] = useState(false);
+  const authrization = localStorage.getItem("techprime");
 
   // Fetch data from the backend
+
   useEffect(() => {
     axios
-      .get("https://light-bat-gown.cyclic.app/project/dashboard")
+      .get("https://weak-rugby-shirt-pig.cyclic.app/project/dashboard", {
+        headers: {
+          'Authorization': authrization
+        }
+      })
       .then((res) => {
         setProjectData(res.data)
         console.log(res.data)
@@ -23,7 +31,9 @@ const BarChart = () => {
       .catch((err) => console.log(err));
   }, []);
 
-
+  const changetologin = () => {
+    navigate("/login")
+  }
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
@@ -107,77 +117,83 @@ const BarChart = () => {
   };
 
   return (
-    <div className="Project_parent" style={{ padding: "15px" }}>
-      {/* Display other project data */}
-      {isMobile ? (
-        <Slider {...settings}>
-          <div className="project">
-            <div className="Total-pro">
-              <h4>Total-Project</h4>
-              <h1>{projectData && projectData.Total}</h1>
+    <div>
+      {authrization ?
+        <div className="Project_parent" style={{ padding: "15px" }}>
+          {/* Display other project data */}
+          {isMobile ? (
+            <Slider {...settings}>
+              <div className="project">
+                <div className="Total-pro">
+                  <h4>Total-Project</h4>
+                  <h1>{projectData && projectData.Total}</h1>
+                </div>
+              </div>
+              <div className="project">
+                <div className="closed">
+                  <h4>Closed</h4>
+                  <h1>{projectData && projectData.Closed}</h1>
+                </div>
+              </div>
+              <div className="project">
+                <div className="running">
+                  <h4>Running</h4>
+                  <h1>{projectData && projectData.Running}</h1>
+                </div>
+              </div>
+              <div className="project">
+                <div className="closure">
+                  <h4>Closure Delay</h4>
+                  <h1>{projectData && projectData.closureDelay}</h1>
+                </div>
+              </div>
+              <div className="project">
+                <div className="cancelled">
+                  <h4>Cancelled</h4>
+                  <h1>{projectData && projectData.Canceled}</h1>
+                </div>
+              </div>
+            </Slider>
+          ) : (
+            <div className="project">
+              <div className="Total-pro">
+                <h4>Total-Project</h4>
+                <h1>{projectData && projectData.Total}</h1>
+              </div>
+              <div className="closed">
+                <h4>Closed</h4>
+                <h1>{projectData && projectData.Closed}</h1>
+              </div>
+              <div className="running">
+                <h4>Running</h4>
+                <h1>{projectData && projectData.Running}</h1>
+              </div>
+              <div className="closure">
+                <h4>Closure Delay</h4>
+                <h1>{projectData && projectData.closureDelay}</h1>
+              </div>
+              <div className="cancelled">
+                <h4>Cancelled</h4>
+                <h1>{projectData && projectData.Canceled}</h1>
+              </div>
             </div>
-          </div>
-          <div className="project">
-            <div className="closed">
-              <h4>Closed</h4>
-              <h1>{projectData && projectData.Closed}</h1>
-            </div>
-          </div>
-          <div className="project">
-            <div className="running">
-              <h4>Running</h4>
-              <h1>{projectData && projectData.Running}</h1>
-            </div>
-          </div>
-          <div className="project">
-            <div className="closure">
-              <h4>Closure Delay</h4>
-              <h1>{projectData && projectData.closureDelay}</h1>
-            </div>
-          </div>
-          <div className="project">
-            <div className="cancelled">
-              <h4>Cancelled</h4>
-              <h1>{projectData && projectData.Canceled}</h1>
-            </div>
-          </div>
-        </Slider>
-      ) : (
-        <div className="project">
-          <div className="Total-pro">
-            <h4>Total-Project</h4>
-            <h1>{projectData && projectData.Total}</h1>
-          </div>
-          <div className="closed">
-            <h4>Closed</h4>
-            <h1>{projectData && projectData.Closed}</h1>
-          </div>
-          <div className="running">
-            <h4>Running</h4>
-            <h1>{projectData && projectData.Running}</h1>
-          </div>
-          <div className="closure">
-            <h4>Closure Delay</h4>
-            <h1>{projectData && projectData.closureDelay}</h1>
-          </div>
-          <div className="cancelled">
-            <h4>Cancelled</h4>
-            <h1>{projectData && projectData.Canceled}</h1>
-          </div>
-        </div>
-      )}
+          )}
 
-      <p>Department wise - Total Vs Closed</p>
-      {/* Render the chart */}
-      <div className="chart-container">
-        <Chart
-          options={chartData.options}
-          series={chartData.series}
-          type="bar"
-          width={isMobile ? "100%" : "79%"}
-          className="chart-card"
-        />
-      </div>
+          <p>Department wise - Total Vs Closed</p>
+          {/* Render the chart */}
+          <div className="chart-container">
+            <Chart
+              options={chartData.options}
+              series={chartData.series}
+              type="bar"
+              width={isMobile ? "100%" : "79%"}
+              className="chart-card"
+            />
+          </div>
+        </div> : <div className='notauth'>
+          <p>Please log in to visit this page</p>
+          <button onClick={changetologin} id="authbtn">Login</button>
+        </div>}
     </div>
   );
 };

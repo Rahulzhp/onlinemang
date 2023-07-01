@@ -12,8 +12,16 @@
     white-space: nowrap;
 }
 
-.logo-container {
+
+
+#logo {
     text-align: center;
+
+}
+
+#logo>img {
+    width: 50%;
+    margin-bottom: -9px;
 }
 
 .logo-container img {

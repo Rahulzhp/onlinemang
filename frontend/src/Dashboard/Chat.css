@@ -76,6 +76,38 @@
   width: 50%;
 }
 
+.notauth {
+  width: 31%;
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  margin-top: -50px;
+}
+
+.notauth>p {
+  font-size: 19px;
+  font-weight: 600;
+  font-family: sans-serif;
+  letter-spacing: 0.7px;
+  color: teal;
+}
+
+#authbtn {
+  color: white;
+  background-color: rgb(4, 78, 146);
+  padding: 7px;
+  border-radius: 11px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 768px) {
 
   .Total-pro,

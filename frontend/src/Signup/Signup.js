@@ -39,9 +39,9 @@ const Signup = () => {
         } else {
             setPasswordError(false);
             setdisable(true)
-            axios.post("https://light-bat-gown.cyclic.app/users/register", payload)
+            axios.post("https://weak-rugby-shirt-pig.cyclic.app/users/register", payload)
                 .then((res) => {
-                    if (res.data === "success") {
+                    if (res.data === "Registered") {
                         setsignsucess(true)
                         setTimeout(() => {
                             navigate("/login")
@@ -68,7 +68,7 @@ const Signup = () => {
     return (
         <div className="login-container">
             <div className="container">
-                <div className="logo-container">
+                <div id="logo">
                     <img src={logo} alt="Logo" />
                     <h4>Online Project Management</h4>
                 </div>

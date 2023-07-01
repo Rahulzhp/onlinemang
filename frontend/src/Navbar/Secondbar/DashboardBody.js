@@ -51,6 +51,7 @@ const DashboardBody = () => {
         };
     }, []);
     const exithandle = () => {
+        localStorage.removeItem("techprime");
         navigate("/login")
     }
     return (
@@ -70,9 +71,9 @@ const DashboardBody = () => {
                         {/*  Create Project*/}
                         <img src={activeIcon === 'create_project' ? Create_Project_active : Create_Project} alt="Create Project" />
                     </div>
-                    <div onClick={exithandle} className="sidebar-exit-icon">
+                    <div className="sidebar-exit-icon">
                         {/* Exit Icon */}
-                        <img src={ExitIcon} alt="Exit" />
+                        <img onClick={exithandle} src={ExitIcon} alt="Exit" />
                     </div>
 
                 </div>

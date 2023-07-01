@@ -20,6 +20,7 @@ const Login = () => {
     }
 
     const onHendell = (e) => {
+        console.log("logsavdghsa")
         if (email === '') {
             setEmailError(true);
         } else {
@@ -31,11 +32,12 @@ const Login = () => {
         } else {
             setPasswordError(false);
             setdisable(true)
-            axios.post("https://light-bat-gown.cyclic.app/users/login", payload)
+            axios.post("https://weak-rugby-shirt-pig.cyclic.app/users/login", payload)
                 .then((res) => {
-                    if (res.data === "sucess") {
+                    if (res.data.token) {
+                        localStorage.setItem("techprime", res.data.token);
                         setInvalid(false)
-                        navigate("/dashboard")
+                        navigate("/")
                         setdisable(false)
 
                     } else {
@@ -46,7 +48,10 @@ const Login = () => {
                         }, 1000)
                     }
                 })
-                .catch(err => setdisable(false))
+                .catch((err) => {
+                    console.log(err)
+                    setdisable(false)
+                })
 
         }
         e.preventDefault()
@@ -56,7 +61,9 @@ const Login = () => {
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
     };
-
+    const handletoLogin = () => {
+        navigate("/signup")
+    }
     return (
         <div className="login-container">
             <div className="container">
@@ -64,55 +71,68 @@ const Login = () => {
                     <img src={logo} alt="Logo" />
                     <h4>Online Project Management</h4>
                 </div>
-                <div className="form-container">
-                    <form onSubmit={onHendell}>
-                        <h3>Login to get started</h3>
-                        <span style={{ color: emailError ? "red" : '' }}>Email</span>
-                        <div className="Username-input-container">
-                            <input
-                                type="text"
-                                placeholder="Username"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className={emailError ? 'error' : ''}
+                <div id="customer">
+                    <div className="form-container">
+                        <form onSubmit={onHendell}>
+                            <h3>Login to get started</h3>
+                            <span style={{ color: emailError ? "red" : '' }}>Email</span>
+                            <div className="Username-input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Username"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className={emailError ? 'error' : ''}
 
-                            />
-                        </div>
-                        {emailError && <span className="error-text">Email is required</span>}
-                        <span style={{ color: passwordError ? "red" : '' }}>Password</span>
-                        <div className="password-input-container">
-                            <input
-                                type={showPassword ? 'text' : 'password'}
-                                placeholder="Password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                className={passwordError ? 'error' : ''}
+                                />
+                            </div>
+                            {emailError && <span className="error-text">Email is required</span>}
+                            <span style={{ color: passwordError ? "red" : '' }}>Password</span>
+                            <div className="password-input-container">
+                                <input
+                                    type={showPassword ? 'text' : 'password'}
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    className={passwordError ? 'error' : ''}
 
-                            />
-                            <span
-                                className={`password-toggle ${showPassword ? 'visible' : ''}`}
-                                onClick={toggleShowPassword}
-                            >
-                                {showPassword ? (
-                                    <FontAwesomeIcon icon={faEye} />
-                                ) : (
-                                    <FontAwesomeIcon icon={faEyeSlash} />
-                                )}
-                            </span>
-                        </div>
-                        {passwordError && <span className="error-text">Password is required</span>}
-                        <div className="forgot-password">
-                            <a href="gmail.com" className="red-link">
-                                Forgot Password?
-                            </a>
+                                />
+                                <span
+                                    className={`password-toggle ${showPassword ? 'visible' : ''}`}
+                                    onClick={toggleShowPassword}
+                                >
+                                    {showPassword ? (
+                                        <FontAwesomeIcon icon={faEye} />
+                                    ) : (
+                                        <FontAwesomeIcon icon={faEyeSlash} />
+                                    )}
+                                </span>
+                            </div>
+                            {passwordError && <span className="error-text">Password is required</span>}
+                            <div className="forgot-password">
+                                <a id="red-link">
+                                    Forgot password
+                                </a>
+                            </div>
+                            <div>
+                                {
+                                    invalid ? <p style={{ textAlign: "start", color: "red" }}>Invalid Credential</p> : ""
+                                }
+                            </div>
+                            <button type="submit" disabled={disable} style={{ backgroundColor: disable ? "gray" : "rgb(4, 115, 215)" }}>Login</button>
+
+                        </form>
+                    </div>
+                    <div id='register'>
+                        <div >
+                            <h1>NEW CUSTOMERS</h1>
+                            <hr></hr>
                         </div>
                         <div>
-                            {
-                                invalid ? <p style={{ textAlign: "start", color: "red" }}>Invalid Credential</p> : ""
-                            }
+                            <p>Create an account to manage project and analyze through ApexCharts.js</p>
                         </div>
-                        <button type="submit" disabled={disable} style={{ backgroundColor: disable ? "gray" : "rgb(4, 115, 215)" }}>Login</button>
-                    </form>
+                        <button onClick={handletoLogin}>Create Account</button>
+                    </div>
                 </div>
             </div>
         </div>

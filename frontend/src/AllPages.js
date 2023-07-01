@@ -8,10 +8,10 @@ import Signup from './Signup/Signup'
 export default function AllPages() {
   return (
     <Routes>
-      <Route path='/' element={<Signup />} ></Route>
+      <Route path='/' element={<DashboardBody />} ></Route>
       <Route path='/login' element={<Login />} ></Route>
       {/* <Route path='/dashboard' element={<Sidebar/>} ></Route> */}
-      <Route path='/dashboard' element={<DashboardBody />} ></Route>
+      <Route path='/signup' element={<Signup />} ></Route>
     </Routes>
   )
 }
