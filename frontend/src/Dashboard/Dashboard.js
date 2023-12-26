@@ -27,7 +27,7 @@ export default function DashboardCard() {
   }
   const fetchData = debounce(() => {
     axios
-      .get(`https://weak-rugby-shirt-pig.cyclic.app/project?search=${search}&page=${currentPage}`, {
+      .get(`https://doubtful-fox-dirndl.cyclic.app/project?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -41,7 +41,7 @@ export default function DashboardCard() {
   const update = (id, payload) => {
     console.log(id, payload)
     axios
-      .patch(`https://weak-rugby-shirt-pig.cyclic.app/project/${id}`, { status: payload }, {
+      .patch(`https://doubtful-fox-dirndl.cyclic.app/project/${id}`, { status: payload }, {
         headers: {
           'Authorization': authrization
         }
@@ -54,7 +54,7 @@ export default function DashboardCard() {
   };
   const sortData = () => {
     if (sort === "High") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/sort/high?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/sort/high?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -68,7 +68,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Running") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/status/running?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/status/running?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -82,7 +82,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Closed") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/status/close?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/status/close?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -96,7 +96,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Cancelled") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/status/cancel?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/status/cancel?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -110,7 +110,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "Low") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/sort/low?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/sort/low?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -124,7 +124,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "project") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/sort/project?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/sort/project?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -138,7 +138,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "start-date") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/start/date?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/start/date?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -152,7 +152,7 @@ export default function DashboardCard() {
         })
     }
     else if (sort === "end-date") {
-      axios.get(`https://weak-rugby-shirt-pig.cyclic.app/project/end/date?search=${search}&page=${currentPage}`, {
+      axios.get(`https://doubtful-fox-dirndl.cyclic.app/project/end/date?search=${search}&page=${currentPage}`, {
         headers: {
           'Authorization': authrization
         }
@@ -167,7 +167,7 @@ export default function DashboardCard() {
     }
     else if (sort === "All") {
       axios
-        .get(`https://weak-rugby-shirt-pig.cyclic.app/project?search=${search}&page=${currentPage}`, {
+        .get(`https://doubtful-fox-dirndl.cyclic.app/project?search=${search}&page=${currentPage}`, {
           headers: {
             'Authorization': authrization
           }

@@ -32,7 +32,7 @@ const Login = () => {
         } else {
             setPasswordError(false);
             setdisable(true)
-            axios.post("https://weak-rugby-shirt-pig.cyclic.app/users/login", payload)
+            axios.post("https://doubtful-fox-dirndl.cyclic.app/users/login", payload)
                 .then((res) => {
                     if (res.data.token) {
                         localStorage.setItem("techprime", res.data.token);

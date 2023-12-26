@@ -63,7 +63,7 @@ function CreateProject() {
             } else {
                 setaddproject(true)
                 setdisable(true)
-                axios.post("https://weak-rugby-shirt-pig.cyclic.app/project/", project, {
+                axios.post("https://doubtful-fox-dirndl.cyclic.app/project/", project, {
                     headers: {
                         'Authorization': authrization
                     }

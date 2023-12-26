@@ -19,7 +19,7 @@ const BarChart = () => {
 
   useEffect(() => {
     axios
-      .get("https://weak-rugby-shirt-pig.cyclic.app/project/dashboard", {
+      .get("https://doubtful-fox-dirndl.cyclic.app/project/dashboard", {
         headers: {
           'Authorization': authrization
         }
